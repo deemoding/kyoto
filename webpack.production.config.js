@@ -32,9 +32,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              modules: {
-                localIdentName: '[local]-[contenthash:base64:8]',
-              },
+              modules: true,
               importLoaders: 2,
               localsConvention: 'camelCase',
               sourceMap: true,

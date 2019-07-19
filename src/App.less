@@ -1,19 +1,36 @@
-.page {}
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-filter: grayscale(80%);
 
-.page-enter {
-  opacity: 0;
-}
+  * {
+    color: skyblue;
+  }
 
-.page-enter-active {
-  opacity: 1;
-  transition: opacity .2s;
-}
+  p {
+    font-size: 20px;
+  }
 
-.page-exit {
-  opacity: 1;
-}
+  .page-switch-enter {
+    opacity: 0;
+    transform: scale(1.1);
+  }
 
-.page-exit-active {
-  opacity: 0;
-  transition: opacity .2s;
+  .page-switch-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all .3s;
+  }
+
+  .page-switch-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .page-switch-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all .3s;
+  }
 }

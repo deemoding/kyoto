@@ -15,11 +15,12 @@ class Page1 extends React.PureComponent {
   render() {
     return (
       <div className={style.page1}>
-        <h1>
-          简介
-        </h1>
-        <p>test</p>
-        <button type="button" onClick={() => { this.onClick() }}>默哀3分钟</button>
+        <div
+          className={style.open}
+          role="button"
+          tabIndex={0}
+          onClick={() => { this.onClick() }}
+        />
       </div>
     );
   }

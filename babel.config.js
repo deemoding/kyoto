@@ -17,11 +17,6 @@ module.exports = api => {
 
   const plugins = [
     ["@babel/plugin-proposal-class-properties"],
-    ["import", {
-      "libraryName": "antd",
-      "libraryDirectory": "es",
-      "style": (paths) => `${paths.replace(/(.*)(row|col)$/, "$1grid")}/style/index`
-    }]
   ];
 
   return {

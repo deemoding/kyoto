@@ -1,0 +1,6 @@
+{
+  "name": "Pray For Kyoto Animation",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation":  "landscape"
+}

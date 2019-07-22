@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
+import letters from "./letter";
 import style from "./style.less";
 
-const text = 'Locez是作死小王子Locez是作死小王子假装过了三分钟';
+const LETTERS_LEN = letters.reduce((pv, cv) => pv + cv, '').length;
 
 class Page2 extends React.Component {
   constructor(props) {
@@ -21,13 +22,15 @@ class Page2 extends React.Component {
   componentDidMount() {
     this.timer = setInterval(() => {
       this.showNext();
-    }, 300);
+    }, Math.round(3000 / LETTERS_LEN));
   }
 
   showNext() {
-    if (this.state.len >= text.length) {
+    if (this.state.len >= LETTERS_LEN) {
       clearInterval(this.timer);
-      this.props.history.push('/page3');
+      setTimeout(() => {
+        this.props.history.push('/page3');
+      }, 3000);
     } else {
       this.setState(state => ({
         len: state.len + 1,
@@ -36,9 +39,23 @@ class Page2 extends React.Component {
   }
 
   render() {
+    const content = [];
+    let len = this.state.len;
+    let i = 0;
+    while (len > 0) {
+      content.push(
+        <p key={i} className={i === letters.length - 1 && style.luokuan}>
+          {letters[i].slice(0, len)}
+        </p>
+      );
+      len -= letters[i].length;
+      i++;
+    }
     return (
       <div className={style.page2}>
-        <p>{text.slice(0, this.state.len)}</p>
+        <div className={style.letters}>
+          {content}
+        </div>
       </div>
     );
   }

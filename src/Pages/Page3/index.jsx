@@ -1,5 +1,8 @@
 import React from "react";
 import style from "./style.less";
+import flowerImg from "./img/flower.png";
+import bgImg from "./img/bg.png";
+import bgPurpleImg from "./img/bgPurple.png";
 
 class Page3 extends React.Component {
   constructor(props) {
@@ -17,14 +20,21 @@ class Page3 extends React.Component {
 
   render() {
     return (
-      <div className={style.page3}>
-        <div
-          role="button"
-          tabIndex={0}
-          className={`${this.state.sent ? style.flowerSent : style.flower}`}
-          onClick={() => { this.onClick() }}
-        >
-          我是鲜花
+      <div
+        className={style.page3}
+        style={{
+          backgroundImage: this.state.sent ? `url(${bgImg})` : `url(${bgPurpleImg})`
+        }}
+      >
+        <div className={style.text}>
+          <p>已有balabala人献花</p>
+          <p style={{ display: 'inline' }}>点击献花</p>
+          <img
+            className={style.flower}
+            src={flowerImg}
+            alt="flower"
+            onClick={() => { this.onClick() }}
+          />
         </div>
       </div>
     );

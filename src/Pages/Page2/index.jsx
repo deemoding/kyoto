@@ -6,6 +6,7 @@ import letters from "./letter";
 import style from "./style.less";
 
 const LETTERS_LEN = letters.reduce((pv, cv) => pv + cv, '').length;
+const SCROLL_TIME = 180000;
 
 class Page2 extends React.Component {
   constructor(props) {
@@ -25,13 +26,13 @@ class Page2 extends React.Component {
   componentDidMount() {
     this.timer = setInterval(() => {
       this.showNext();
-    }, Math.round(180000 / LETTERS_LEN));
+    }, Math.round(SCROLL_TIME / LETTERS_LEN));
     const scrollBottom = getScrollBottom();
     this.timerScroll = setInterval(() => {
       if (this.scrollTop >= scrollBottom) {
         clearInterval(this.timerScroll);
       } else {
-        this.scrollTop += scrollBottom * 16 / 180000;
+        this.scrollTop += scrollBottom * 10 / SCROLL_TIME;
         window.scrollTo(0, this.scrollTop);
       }
     }, 16);

@@ -1,18 +1,23 @@
 @import "../default";
 
 .page3 {
-  .page();
   height: 100vh;
-  background: url("./img/bg.jpg") center/cover no-repeat;
+  background: url("./img/bgPurple.png") center/cover no-repeat;
 
-  .flower {
-    outline: none;
-    transform: translate(16vw, 22vh);
-  }
+  .text {
+    padding: 15vh 0 0 2vw;
 
-  .flower-sent {
-    outline: none;
-    transform: translate(-16vw, -22vh);
-    transition: all 1s;
+    @fontSize: 3rem;
+
+    p {
+      font-size: @fontSize;
+      line-height: 1.2*@fontSize;
+      color: skyblue;
+    }
+
+    .flower {
+      height: 3vw;
+      cursor: pointer;
+    }
   }
 }

@@ -72,7 +72,7 @@ module.exports = {
           },
         ],
       }, {
-        test: /\.(png|jpg|jpeg|svg|gif)$/,
+        test: /\.(png|jpg|jpeg|ttf)$/,
         use: [
           {
             loader: 'url-loader',
@@ -82,10 +82,7 @@ module.exports = {
             }
           }
         ]
-      }, {
-        test: /\.md$/,
-        loader: "raw-loader"
-      }
+      },
     ]
   },
   resolve: {
@@ -118,6 +115,7 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin({
         assetNameRegExp: /\.(css|less)$/,
+        filename: '[name].[chunkhash:8].min.css',
       }),
     ],
   },

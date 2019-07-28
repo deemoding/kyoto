@@ -68,7 +68,7 @@ module.exports = {
           "css-loader",
         ],
       }, {
-        test: /\.(png|jpg|jpeg|svg|gif)$/,
+        test: /\.(png|jpg|jpeg|ttf)$/,
         use: [
           {
             loader: 'url-loader',
@@ -78,10 +78,7 @@ module.exports = {
             }
           }
         ]
-      }, {
-        test: /\.md$/,
-        loader: "raw-loader"
-      }
+      },
     ]
   },
   resolve: {

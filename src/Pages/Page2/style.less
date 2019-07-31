@@ -1,5 +1,16 @@
 @import "../default";
 
+@keyframes fadeLeftInA {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .page2 {
   height: 130vw;
   background: url("./img/bg.png") center/cover no-repeat;
@@ -15,6 +26,10 @@
       font-size: @fontSize;
       text-indent: 2*@fontSize;
       color: skyblue;
+
+      span {
+        animation: fadeLeftInA 2s ease;
+      }
     }
 
     .luokuan {

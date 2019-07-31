@@ -38,6 +38,11 @@ class Page2 extends React.Component {
     }, 16);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    clearInterval(this.timerScroll);
+  }
+
   showNext() {
     if (this.state.len >= LETTERS_LEN) {
       clearInterval(this.timer);
@@ -58,7 +63,8 @@ class Page2 extends React.Component {
     while (len > 0) {
       content.push(
         <p key={i} className={i === letters.length - 1 ? style.luokuan : ''}>
-          {letters[i].slice(0, len)}
+          {/* eslint-disable-next-line react/no-array-index-key */}
+          {letters[i].slice(0, len).split('').map((s, j) => <span key={j}>{s}</span>)}
         </p>
       );
       len -= letters[i].length;

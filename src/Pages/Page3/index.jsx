@@ -27,7 +27,7 @@ class Page3 extends React.Component {
         }}
       >
         <div className={style.text}>
-          <p>已有作死小王子献花</p>
+          <p>作死小王子通过这里对这次事件表达了自己的祝福并献上了花束</p>
           <p>点击献花</p>
           <img
             className={style.flower}

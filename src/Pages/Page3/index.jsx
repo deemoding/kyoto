@@ -27,8 +27,8 @@ class Page3 extends React.Component {
         }}
       >
         <div className={style.text}>
-          <p>已有balabala人献花</p>
-          <p style={{ display: 'inline' }}>点击献花</p>
+          <p>已有作死小王子献花</p>
+          <p>点击献花</p>
           <img
             className={style.flower}
             src={flowerImg}

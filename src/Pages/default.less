@@ -2,6 +2,29 @@
   font-family: fzzj;
   src: url("../resource/FZZJ-KYTJW.ttf") format("truetype");
 }
+
+@keyframes fadeLeftInA {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRightInA {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .page() {
   width: 100%;
   display: flex;
@@ -13,4 +36,8 @@
 :root {
   font-size: 1vw;
   overflow-x: hidden;
+}
+
+p, div, span {
+  color: white;
 }

@@ -6,7 +6,8 @@ import letters from "./letter";
 import style from "./style.less";
 
 const LETTERS_LEN = letters.reduce((pv, cv) => pv + cv, '').length;
-const SCROLL_TIME = 180000;
+const SCROLL_TIME = 60000; // 信的内容完全显示需要的时间(ms)
+const SCROLL_MODULUS = 16; // 滚动条滚动到底速度倍率，用于调整滚动条每16ms滚动的速度
 
 class Page2 extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class Page2 extends React.Component {
       if (this.scrollTop >= scrollBottom) {
         clearInterval(this.timerScroll);
       } else {
-        this.scrollTop += scrollBottom * 10 / SCROLL_TIME;
+        this.scrollTop += scrollBottom * SCROLL_MODULUS / SCROLL_TIME;
         window.scrollTo(0, this.scrollTop);
       }
     }, 16);

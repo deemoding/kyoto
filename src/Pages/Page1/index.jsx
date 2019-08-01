@@ -15,6 +15,7 @@ class Page1 extends React.PureComponent {
   render() {
     return (
       <div className={style.page1}>
+        <div className={style.title} />
         <div
           className={style.open}
           role="button"

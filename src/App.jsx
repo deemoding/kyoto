@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
+import Bgm from "./Pages/Bgm";
 import Page1 from "./Pages/Page1";
 import Page2 from "./Pages/Page2";
 import Page3 from "./Pages/Page3";
@@ -16,6 +17,7 @@ class App extends React.PureComponent {
   render() {
     return (
       <Router>
+        <Bgm />
         <div className={style.main}>
           {routes.map(({ path, Component }) => (
             <Route key={path} exact path={path} component={Component} />

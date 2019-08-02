@@ -72,7 +72,7 @@ module.exports = {
           },
         ],
       }, {
-        test: /\.(png|jpg|jpeg|ttf)$/,
+        test: /\.(png|jpg|jpeg|ttf|mp3)$/,
         use: [
           {
             loader: 'url-loader',

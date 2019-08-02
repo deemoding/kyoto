@@ -52,7 +52,9 @@
     "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
     "prefer-destructuring": "off",
     "promise/always-return": "off",
-    "promise/catch-or-return": ["error", { "terminationMethod": ["done", "then"] }],
+    "promise/catch-or-return": ["error", {
+      "terminationMethod": ["done", "then", "catch", "finally"]
+    }],
     "promise/no-native": 0,
     "promise/param-names": 2,
     "quote-props": "off",

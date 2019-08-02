@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route } from "react-router-dom";
+import "./preload";
 import Bgm from "./Pages/Bgm";
 import Page1 from "./Pages/Page1";
 import Page2 from "./Pages/Page2";

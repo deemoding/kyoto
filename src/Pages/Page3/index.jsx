@@ -66,12 +66,14 @@ class Page3 extends React.Component {
         <div className={style.text}>
           <p>
             已有
-            {this.state.nums > 0 ? this.state.nums : '多'}
+            <span className={style.number}>
+              {this.state.nums > 0 ? this.state.nums : '多'}
+            </span>
             人通过这里对这次事件表达了自己的祝福并献上了花束
           </p>
-          <p>点击献花</p>
+          {!this.state.sent && <p>点击献花</p>}
           <img
-            className={style.flower}
+            className={this.state.sent ? style.flowerSent : style.flower}
             src={flowerImg}
             alt="flower"
             onClick={() => { this.onClick() }}

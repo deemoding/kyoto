@@ -38,7 +38,7 @@ class Page3 extends React.Component {
   }
 
   onClick() {
-    if (!(this.getting || this.posting)) {
+    if (!(this.getting || this.posting || this.state.sent)) {
       this.posting = true;
       myAxios.post('/api/flower/')
         .then(rsp => {

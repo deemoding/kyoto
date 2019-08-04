@@ -2,7 +2,7 @@
 
 .page2 {
   height: 130vw;
-  background: url("./img/bg.png") center no-repeat;
+  background: url("./img/bg.jpg") center no-repeat;
   background-size: 100%;
 
   .letters {
@@ -16,13 +16,13 @@
       font-size: @fontSize;
       text-indent: 2*@fontSize;
 
+      &:first-child, &:last-child {
+        text-indent: 0;
+      }
+
       span {
         animation: fadeLeftInA 2s ease;
       }
-    }
-
-    .luokuan {
-      float: right;
     }
   }
 }

@@ -3,8 +3,8 @@ import axios from "axios";
 import config from "../../config";
 import style from "./style.less";
 import flowerImg from "./img/flower.png";
-import bgImg from "./img/bg.png";
-import bgPurpleImg from "./img/bgPurple.png";
+import bgImg from "./img/bg.jpg";
+import bgPurpleImg from "./img/bgPurple.jpg";
 
 const myAxios = axios.create({
   baseURL: config.ajaxURL,

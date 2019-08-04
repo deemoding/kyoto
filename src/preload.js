@@ -1,7 +1,7 @@
-// 预加载大图
-import img1 from "./Pages/Page2/img/bg.png";
-import img2 from "./Pages/Page3/img/bg.png";
-import img3 from "./Pages/Page3/img/bgPurple.png";
+// 预加载大?图
+import img1 from "./Pages/Page2/img/bg.jpg";
+import img2 from "./Pages/Page3/img/bg.jpg";
+import img3 from "./Pages/Page3/img/bgPurple.jpg";
 import img4 from "./Pages/Page3/img/flower.png";
 
 setTimeout(() => {

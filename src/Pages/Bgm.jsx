@@ -1,14 +1,18 @@
 import React from "react";
+import music from "../resource/never_coming_back.mp3";
 
 class Bgm extends React.PureComponent {
   render() {
     return (
-      <div style={{ display: 'none' }}>
-        <iframe
-          title="bgm"
-          src="//music.163.com/outchain/player?type=2&id=548145360&auto=1"
-        />
-      </div>
+      <audio
+        style={{
+          display: 'none'
+        }}
+        src={music}
+        loop
+        autoPlay
+        controls
+      />
     );
   }
 }

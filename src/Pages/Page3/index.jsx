@@ -63,6 +63,7 @@ class Page3 extends React.Component {
           backgroundImage: this.state.sent ? `url(${bgImg})` : `url(${bgPurpleImg})`
         }}
       >
+        <div />
         <div className={style.text}>
           <p>
             已有
@@ -78,6 +79,9 @@ class Page3 extends React.Component {
             alt="flower"
             onClick={() => { this.onClick() }}
           />
+        </div>
+        <div className={style.footer}>
+          <p>bgm: Evan Call - Never Coming Back</p>
         </div>
       </div>
     );

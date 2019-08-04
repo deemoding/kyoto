@@ -63,7 +63,7 @@ class Page2 extends React.Component {
     let i = 0;
     while (len > 0) {
       content.push(
-        <p key={i}>
+        <p key={i} className={i === letters.length - 1 ? style.thanks : ''}>
           {/* eslint-disable-next-line react/no-array-index-key */}
           {letters[i].slice(0, len).split('').map((s, j) => <span key={j}>{s}</span>)}
         </p>

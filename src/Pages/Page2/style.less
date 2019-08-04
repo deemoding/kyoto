@@ -16,7 +16,11 @@
       font-size: @fontSize;
       text-indent: 2*@fontSize;
 
-      &:first-child, &:last-child {
+      &:first-child{
+        text-indent: 0;
+      }
+
+      &.thanks {
         text-indent: 0;
       }
 
